@@ -29,10 +29,12 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.AWS_USERNAME }}@${{ secrets.AWS_HOST }} << 'EOF'
         cd /var/www/html/FSD
         git pull origin main
+        cd FSD-Laravel
         cp .env.example .env
         sed -i "s/APP_KEY=.*/APP_KEY=${{ secrets.APP_KEY }}/" .env
         sed -i "s/APP_URL=.*/APP_URL=${{ secrets.APP_URL }}/" .env
         sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=${{ secrets.DB_PASSWORD }}/" .env
+        cd ..
         docker-compose down
         docker-compose build
         docker-compose up -d
