@@ -1,10 +1,10 @@
 FROM node:18
 
 # Set working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and install dependencies
-COPY package*.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
 # Copy the app files

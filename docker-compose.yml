@@ -19,7 +19,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./food-standard-react:/usr/src/app
+      - ./food-standard-react:/app
     networks:
       - app-network
   
