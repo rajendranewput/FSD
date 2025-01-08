@@ -1,7 +1,10 @@
-/vendor/
-FSD-Laravel/vendor/
-FSD-Laravel/.env
+vendor/
+.env
+storage/*
+!storage/app/public
 
+# Ignore bootstrap/cache
+bootstrap/cache/*
 node_modules/
 npm-debug.log
 yarn-error.log
