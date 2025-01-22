@@ -20,8 +20,8 @@ class OwnCors
         header("Access-Control-Allow-Origin: *");
 
         $headers = [
-            'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
-            'Access-Control-Allow-Headers' => 'Content-Type, X-Auth-Token, Origin, Authorization'
+            'Access-Control-Allow-Methods' => '*',
+            'Access-Control-Allow-Headers' => '*'
         ];
         if ($request->getMethod() == "OPTIONS") {
             return response('OK')
