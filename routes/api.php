@@ -19,6 +19,9 @@ use App\Http\Controllers\DecreasingDeforestationController;
 use App\Http\Controllers\EmphasizePlantController;
 use App\Http\Controllers\WellnessPlateController;
 use App\Http\Controllers\WBIController;
+use App\Http\Controllers\Popup\BeefPopupController;
+use App\Http\Controllers\TrendGraphController;
+
 
 
 Route::get('/users', [UserController::class, 'index']);
@@ -44,3 +47,8 @@ Route::post('/decreasing-deforestation', [DecreasingDeforestationController::cla
 Route::post('/emphasize-plant-proteins', [EmphasizePlantController::class, 'emphasizePlant']);
 Route::post('/wellness-plate', [WellnessPlateController::class, 'wellnessPlate']);
 Route::post('/wbi', [WBIController::class, 'wbiData']);
+Route::post('/beef-popup', [BeefPopupController::class, 'beefPopUp']);
+Route::post('/trend-purchasing', [TrendGraphController::class, 'purcahasingTrendGraph']);
+
+
+
